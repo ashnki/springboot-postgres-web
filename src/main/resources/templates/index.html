@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Spring Boot Web</title>
+</head>
+<body>
+  <h1>Spring Boot + PostgreSQL</h1>
+
+  <form method="post" action="/add">
+    <input name="name" placeholder="Enter item" required />
+    <button type="submit">Add</button>
+  </form>
+
+  <ul>
+    <li th:each="item : ${items}" th:text="${item.name}"></li>
+  </ul>
+</body>
+</html>
